@@ -327,6 +327,24 @@ public String deFront(String str)
 	else
 		return "";
 }
+// OR
+
+public String deFront(String str){
+if(str.length() == 1 && str.charAt(0) != 'a')
+        return "";
+          
+    if(str.length() >= 2) {
+        if(str.charAt(0) != 'a' && str.charAt(1) != 'b') {
+            return str.substring(2);
+        } else if(str.charAt(0) != 'a') {
+            return str.substring(1);
+        } else if(str.charAt(1) != 'b') {
+            return "a" + str.substring(2);
+        }
+    }
+                                                  
+    return str;
+}
 
 
 // Given a string and a second "word" string, we'll say that the word matches the string if it appears at
