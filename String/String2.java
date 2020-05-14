@@ -18,9 +18,25 @@ public String doubleChar(String str) {
 }
 
 
+/*
+
+Given a string, does "xyz" appear in the middle of the string? To define middle, we'll say that the number of chars to the left and right of the "xyz" must differ by at most one. This problem is harder than it looks.
 
 
+xyzMiddle("AAxyzBB") → true
+xyzMiddle("AxyzBB") → true
+xyzMiddle("AxyzBBB") → false
 
+*/
+public boolean xyzMiddle(String str) {
+  int i = str.length()/2-1;
+  if (str.length() >= 3 && (str.substring(i, i+3).equals("xyz") || (str.length()%2 == 0 && str.substring(i-1, i+2).equals("xyz"))  )) {
+  return true;
+     }
+  else{ 
+  return false;//str.substring(str.)
+	}
+}
 
 
 
